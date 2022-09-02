@@ -1,0 +1,84 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block slider %}
+<div class="row slider">
+    <div class="col">
+        <img src="{% static 'core/img/about-img.jpg' %}" class="w-100" alt="Responsive image">
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<main>
+    <!--Acerca de - contenido -->
+    <div class="container">
+        <div class="row contenedor">
+            <div class="col">
+                <h2 class="titulo">Acerca de Juan Pablo Spera</h2>
+                <div class="row projects justify-content-center">
+                    <div class="col-12 col-lg-3 col-md-3">
+                        <img src="{% static 'core/img/foto.jpg' %}" class="rounded-circle w-100" alt="...">
+                        <hr>
+                        <p class="text-center">Juan Pablo Spera</p>
+                        <hr>
+                    </div>
+                    <div class="col-12 col-lg-9 col-md-9">
+                        <h5 class="title-project">Juan Pablo Spera</h5>
+                        <p>Este es mi primer blog.
+
+                        </p>
+
+                        <p>Primera entrega de proyecto. 
+
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="titulo">Conocimientos Profesionales</h2>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-3 col-md-3">
+                        <p class="label text-center">Power BI</p>
+                    </div>
+                    <div class="col-12 col-lg-9 col-md-9">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55"
+                                aria-valuemin="0" aria-valuemax="100">55%</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-3">
+                        <p class="label text-center">SQL</p>
+                    </div>
+                    <div class="col-12 col-lg-9 col-md-9">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30"
+                                aria-valuemin="0" aria-valuemax="100">30%</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-3">
+                        <p class="label text-center">Python</p>
+                    </div>
+                    <div class="col-12 col-lg-9 col-md-9">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="35"
+                                aria-valuemin="0" aria-valuemax="100">35%</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3 col-md-3">
+                        <p class="label text-center">MS Excel</p>
+                    </div>
+                    <div class="col-12 col-lg-9 col-md-9">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
+                                aria-valuemin="0" aria-valuemax="100">95%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
