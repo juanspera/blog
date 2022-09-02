@@ -42,28 +42,22 @@
     <div class="container">
         <div class="row contenedor">
             <div class="col">
-                <h2 class="titulo">Blog</h2>
+                <h2 class="titulo">Mi Blog</h2>
                 <div class="row projects justify-content-center">
+                {% for project in projects %}
                     <div class="content-project col-12 col-lg-4 col-md-4">
                         <a href="" data-toggle="modal" data-target="#modal">
-                            <img src="{% static 'core/img/bg.jpg' %}" class="img-fluid" alt="...">
+                            <img src="{{ project.image.url}}" class="img-fluid" alt="...">
                         </a>
                     </div>
                     <div class="content-project col-12 col-lg-8 col-md-8">
-                        <h5 class="title-project">Mi primer blog</h5>
-                        <p>Comentarios varios.</p>
-                        <a href="#" class="btn link-project">Acceda aquí</a>
+                        <h5 class="title-project">{{project.title}} - creado el {{project.created}}</h5>
+                        <p>{{project.description}}</p>
+                        {% if project.link %}
+                        <a href="{{project.link}}" class="btn link-project">Acceda aquí al link: {{project.link}}</a>
+                        {% endif %}
                     </div>
-
-                    <div class="content-project col-12 col-lg-4 col-md-4">
-                        <a href="" data-toggle="modal" data-target="#modal">
-                            <img src="{% static 'core/img/bg2.jpg' %}" class="img-fluid" alt="...">
-                        </a>
-                    </div>
-                    <div class="content-project col-12 col-lg-8 col-md-8">
-                        <h5 class="title-project">Otro proyecto</h5>
-                        <p>Descripción.</p>
-                    </div>
+                {% endfor %}
 
                     <!-- Ventana Modal -->
                     <div class="modal fade" id="modal">
