@@ -1,6 +1,6 @@
 # Este es mi primer blog.
-Alumno: Juan Pablo Spera
-Versión: primera entrega
+**Alumno: Juan Pablo Spera
+Versión: primera entrega**
 
 La página de inicio o principal tiene arriba a la derecha links a las páginas de acerca del autor y datos de contacto.
 
