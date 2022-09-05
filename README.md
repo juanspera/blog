@@ -9,7 +9,9 @@ En la página principal, con el título Mi Blog, se van listando (de más nuevo 
 Cada post/blog puede cuenta con un título, un comentario, y puede contar con una imagen y/o un link. Se puede editar y en la página principal se enseñará también la fecha de creación.
 
 Para subir, editar o eliminar un post hay que loguearse como admin en http://127.0.0.1:8000/admin/
+
 Nombre de usuario: juanspera
+
 Contraseña: bocajrs1
 
 Una vez subidos los posts se puede visualizar las imágenes haciendo click en las mismas, así como acceder a los links de los posts.
