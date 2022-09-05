@@ -16,14 +16,20 @@ Contraseña: bocajrs1
 
 Una vez subidos los posts se puede visualizar las imágenes haciendo click en las mismas, así como acceder a los links de los posts.
 
-Versión de Python:
+**Versión de Python:**
+
 Python 3.9.13
 
-Libraries:
+**Libraries:**
+
 asgiref==3.5.2
+
 Django==4.1
+
 Pillow==9.2.0
+
 sqlparse==0.4.2
+
 tzdata==2022.2
 
 
