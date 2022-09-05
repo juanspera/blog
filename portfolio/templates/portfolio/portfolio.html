@@ -47,7 +47,9 @@
                 {% for project in projects %}
                     <div class="content-project col-12 col-lg-4 col-md-4">
                         <a href="" data-toggle="modal" data-target="#modal">
+                            {% if project.image %}
                             <img src="{{ project.image.url}}" class="img-fluid" alt="...">
+                            {% endif %}
                         </a>
                     </div>
                     <div class="content-project col-12 col-lg-8 col-md-8">
