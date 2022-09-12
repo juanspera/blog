@@ -7,3 +7,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'core/contact.html')
+
+def users(request):
+    return render(request, 'core/users.html')

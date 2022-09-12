@@ -1,6 +1,6 @@
 # Este es mi primer blog.
 **Alumno: Juan Pablo Spera
-Versión: primera entrega**
+Versión: entrega**
 
 La página de inicio o principal tiene arriba a la derecha links a las páginas de acerca del autor y datos de contacto.
 
@@ -14,7 +14,7 @@ Nombre de usuario: juanspera
 
 Contraseña: bocajrs1
 
-Una vez subidos los posts se puede visualizar las imágenes haciendo click en las mismas, así como acceder a los links de los posts.
+Una vez subidos los posts se puede visualizar las imágenes haciendo click en las mismas, así como acceder a los links de los posts (por ejemplo el link al github del autor).
 
 **Versión de Python:**
 
