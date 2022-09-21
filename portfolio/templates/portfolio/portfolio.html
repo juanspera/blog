@@ -54,6 +54,9 @@
                     </div>
                     <div class="content-project col-12 col-lg-8 col-md-8">
                         <h5 class="title-project">{{project.title}} - creado el {{project.created}}</h5>
+                        {% if project.subtitle %}
+                        <h6 class="title-project">{{project.subtitle}}</h6>
+                        {% endif %}
                         <p>{{project.description}}</p>
                         {% if project.link %}
                         <a href="{{project.link}}" class="btn link-project">Acceda aquí al link: {{project.link}}</a>

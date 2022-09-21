@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 class Project (models.Model):
     title = models.CharField(max_length=200, verbose_name='Título')
+    subtitle = models.CharField(max_length=200, verbose_name='Subtítulo',null=True, blank=True)
     description = models.TextField(verbose_name='Comentario')
     image = models.ImageField(verbose_name='Imagen', upload_to="Blog", null=True, blank=True)
     link = models.URLField(null=True, blank=True, verbose_name="Link")
