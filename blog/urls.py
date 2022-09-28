@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('', lambda req: redirect('index')),
+    path('', lambda req: redirect('UserLogin')),
     #App Core
     path('', include('core.urls')),
     #App Portfolio

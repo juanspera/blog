@@ -13,7 +13,7 @@ class AvatarForm(forms.ModelForm):
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
-    last_name = forms.IntegerField()
+    last_name = forms.CharField()
 
     class Meta:
         model = User
