@@ -93,14 +93,14 @@ def login_request(request):
         else:
             messages.info(request, 'inicio de sesion fallido!')
 
-        return redirect('core/base.html')
+        return redirect('')
 
     contexto = {
         'form': AuthenticationForm(),
         'titulo_form': 'Login',
         'boton_envio': 'Enviar'
     }
-    return render(request, 'core/base.html', contexto)
+    return render(request, '', contexto)
 
 
 def register(request):
@@ -124,4 +124,8 @@ def register(request):
         'nombre_form': 'Registro'
     }
 
-    return render(request, 'core/base.html', contexto)
+    return render(request, 'base_formulario.html', contexto)
+
+
+def prueba(request):
+    return render(request, 'core/base.html')
