@@ -1,15 +1,13 @@
 {% extends 'core/base.html' %}
 
-{% block title %}
-{{ titulo_form }}
-{% endblock %}
-
 {% block content %}
 
-    <h2>{{ titulo_form }}</h2>
+    
 
-    <form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
+      <form action="" method="POST" enctype="multipart/form-data" style="margin: auto; width: 220px;">
+        <h2>{{ titulo_form }}</h2>
+    
+        {% csrf_token %}
 
         {{ form.as_p }}
 
