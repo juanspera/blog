@@ -10,3 +10,6 @@ def contact(request):
 
 def users(request):
     return render(request, 'core/users.html')
+
+def index(request):
+    return render(request, 'core/base.html')

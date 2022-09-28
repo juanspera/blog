@@ -57,7 +57,8 @@
                         {% if project.subtitle %}
                         <h6 class="title-project">{{project.subtitle}}</h6>
                         {% endif %}
-                        <p>{{project.description}}</p>
+                        <body>{{project.description|safe}}</body>
+                        <br>
                         {% if project.link %}
                         <a href="{{project.link}}" class="btn link-project">Acceda aquí al link: {{project.link}}</a>
                         {% endif %}
