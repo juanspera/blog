@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+{{ titulo_form }}
+{% endblock %}
+
+{% block content %}
+
+    <h2>{{ titulo_form }}</h2>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="{{ boton_envio }}">
+
+    </form>
+
+{% endblock %}
