@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from user.forms import UserRegisterForm, AvatarForm
 from user.models import Avatar
 
-
+@login_required
 def upload_avatar(request):
     if request.method == "POST":
 
@@ -27,11 +27,11 @@ def upload_avatar(request):
                 avatar = Avatar(user=data.get("user"), imagen=data.get("imagen"))
                 avatar.save()
 
-        return redirect("index")
+        return redirect("portfolio")
 
     contexto = {
         "form": AvatarForm(),
-        'boton_envio': 'Crear'
+        'boton_envio': 'Subir'
     }
     return render(request, "base_formulario.html", contexto)
 
@@ -57,7 +57,7 @@ def editar_usuario(request):
             messages.info(request, 'Tu usuario fue registrado satisfactoriamente!')
         else:
             messages.info(request, 'Tu usuario no puso ser registrado!')
-        return redirect('index')
+        return redirect('portfolio')
     contexto = {
         # 'form': UserCreationForm(),
         'form': UserRegisterForm(
@@ -66,7 +66,8 @@ def editar_usuario(request):
                 'email': usuario.email,
                 'last_name': usuario.last_name
             }),
-        'boton_envio': 'Registro',
+            'titulo_form': 'Editar Usuario',
+        'boton_envio': 'Editar',
     }
 
     return render(request, 'base_formulario.html', contexto)
