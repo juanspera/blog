@@ -21,13 +21,13 @@ def portfolio(request):
 def portfolio_formulario(request):
 
     if request.method == 'POST':
-        mi_formulario = ProjectFormulario(request.POST)
+        mi_formulario = ProjectFormulario(request.POST, request.FILES)
 
         if mi_formulario.is_valid():
 
             data = mi_formulario.cleaned_data
 
-            curso1 = Project(title=data.get('title'), description=data.get('description'))
+            curso1 = Project(title=data.get('title'), description=data.get('description'), image=data.get('image'))
             curso1.save()
 
             return redirect('portfolio')
