@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
+
 # Create your views here.
 
 @login_required
@@ -10,7 +12,7 @@ def about(request):
 def contact(request):
     return render(request, 'core/contact.html')
 
-@login_required
+@user_passes_test(lambda u: u.is_superuser)
 def admin(request):
     return render(request, 'core/admin.html')
 
