@@ -50,16 +50,26 @@
 							<span>Usuarios</span>
 							<i class="icono icon-user"></i>
 						</div>
+						{% if user.is_authenticated %}
 						<a href="{% url 'UserLogout' %}" class="c-2 d-flex align-items-center">
 							<div class="d-flex flex-column text-center">
 								<span>Log Out</span>
 								<i class="icono icon-dot"></i>
+								{% else %}
+								<a href="{% url 'UserRegister' %}" class="c-2 d-flex align-items-center">
+									<div class="d-flex flex-column text-center">
+										<span>Registrarse</span>
+										<i class="icono icon-dot"></i>
+								{% endif %}
 							</div>
 						</a>
 					</a>
 				</nav>
 			</div>
-
+			{% for message in messages %}
+            <br>
+			<center><p>{{ message }}</p></center>
+        	{% endfor %}
 			<!--Slider -->
             {% block slider %}
 

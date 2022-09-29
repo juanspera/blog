@@ -121,7 +121,8 @@ def register(request):
     contexto = {
         # 'form': UserCreationForm(),
         'form': UserRegisterForm(),
-        'nombre_form': 'Registro'
+        'titulo_form': 'Registrarse',
+        'boton_envio': 'Enviar'
     }
 
     return render(request, 'base_formulario.html', contexto)
