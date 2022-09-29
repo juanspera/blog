@@ -27,7 +27,7 @@ def portfolio_formulario(request):
 
             data = mi_formulario.cleaned_data
 
-            curso1 = Project(title=data.get('title'), description=data.get('description'), image=data.get('image'))
+            curso1 = Project(title=data.get('title'), subtitle=data.get('subtitle'), description=data.get('description'), image=data.get('image'), link=data.get('link'))
             curso1.save()
 
             return redirect('portfolio')
