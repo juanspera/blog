@@ -3,6 +3,7 @@ from turtle import title
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import render, redirect
 
 import django
@@ -17,7 +18,7 @@ def portfolio(request):
     projects = Project.objects.all()
     return render(request, 'portfolio/portfolio.html', {'projects':projects})
 
-
+@user_passes_test(lambda u: u.is_superuser)
 def portfolio_formulario(request):
 
     if request.method == 'POST':
