@@ -11,8 +11,8 @@ def contact(request):
     return render(request, 'core/contact.html')
 
 @login_required
-def users(request):
-    return render(request, 'core/users.html')
+def admin(request):
+    return render(request, 'core/admin.html')
 
 @login_required
 def index(request):
