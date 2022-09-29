@@ -45,15 +45,15 @@
 							<i class="icono icon-briefcase"></i>
 						</div>
 					</a>
-					<a href="{% url 'contact' %}" class="c-3 d-flex align-items-center">
+					<a href="{% url 'PortfolioFormulario' %}" class="c-3 d-flex align-items-center">
 						<div class="d-flex flex-column text-center">
-							<span>Contacto</span>
+							<span>Crear Post</span>
 							<i class="icono icon-mail"></i>
 						</div>
 					</a>
-					<a href="{% url 'users' %}" class="c-1 d-flex align-items-center">
+					<a href="{% url 'contact' %}" class="c-1 d-flex align-items-center">
 						<div class="d-flex flex-column text-center">
-							<span>Usuarios</span>
+							<span>Contacto</span>
 							<i class="icono icon-user"></i>
 						</div>
 						{% if user.is_authenticated %}

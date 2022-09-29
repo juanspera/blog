@@ -54,9 +54,9 @@ def editar_usuario(request):
 
             usuario.save()
 
-            messages.info(request, 'Tu usuario fue registrado satisfactoriamente!')
+            messages.info(request, 'Tu usuario fue modificado satisfactoriamente!')
         else:
-            messages.info(request, 'Tu usuario no puso ser registrado!')
+            messages.info(request, 'Tu usuario no puso ser modificado!')
         return redirect('portfolio')
     contexto = {
         # 'form': UserCreationForm(),
