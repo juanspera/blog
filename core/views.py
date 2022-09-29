@@ -13,8 +13,8 @@ def contact(request):
     return render(request, 'core/contact.html')
 
 @user_passes_test(lambda u: u.is_superuser)
-def admin(request):
-    return render(request, 'core/admin.html')
+def panel(request):
+    return render(request, 'core/panel.html')
 
 @login_required
 def index(request):
