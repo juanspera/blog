@@ -84,9 +84,11 @@ def editar_portfolio(request, id):
     contexto = {
         'form': ProjectFormulario(
             initial={
-                "titulo": post_editar.title,
-                "subtitulo": post_editar.subtitle,
-                "comentario": post_editar.description
+                "title": post_editar.title,
+                "subtitle": post_editar.subtitle,
+                "description": post_editar.description,
+                "image": post_editar.image,
+                "link": post_editar.link
             }
         ),
         'titulo_form': 'Editar Post',
