@@ -4,6 +4,9 @@ from . import views
 urlpatterns = [
      path('blog/',views.portfolio, name='portfolio'),
      path('crear_post/', views.portfolio_formulario, name='PortfolioFormulario'),
+     path('eliminar_post/<int:id>', views.eliminar_portfolio, name='EliminarPost'),
+     path('blog_admin/',views.portfolio_admin, name='portfolio_admin'),
+     path('editar_post/<int:id>', views.editar_portfolio, name='EditarPost')
 ]
 
 

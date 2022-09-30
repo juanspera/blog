@@ -1,4 +1,5 @@
 from msilib.schema import Class
+from click import DateTime
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
@@ -19,4 +20,4 @@ class Project (models.Model):
         ordering = ["-created"]
     
     def __str__(self):
-        return self.title
+        return f"Post titulado: '{self.title}'"
