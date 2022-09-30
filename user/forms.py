@@ -9,7 +9,7 @@ from user.models import Avatar
 class AvatarForm(forms.ModelForm):
     class Meta:
         model = Avatar
-        fields = "__all__"
+        fields = ('imagen',)
 
 
 class UserRegisterForm(UserCreationForm):

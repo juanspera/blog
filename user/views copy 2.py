@@ -11,7 +11,7 @@ from user.models import Avatar
 
 @login_required
 def upload_avatar(request):
-    usuario = request.user.id
+      
     if request.method == "POST":
         
         formulario = AvatarForm(request.POST, request.FILES)
@@ -19,19 +19,18 @@ def upload_avatar(request):
         if formulario.is_valid():
             
             data = formulario.cleaned_data
-            avatar = Avatar.objects.filter(username_id=usuario)
+            avatar = Avatar.objects.filter(user=data.get("user"))
             
-            if  len(avatar) > 0:
-                avatar = Avatar.objects.get(username_id=usuario)
-                avatar.delete()
-                avatar = Avatar(username_id=usuario, imagen=data.get("imagen"))
+            if len(avatar) > 0:
+                avatar = avatar[0]
+                avatar.imagen = formulario.cleaned_data("imagen")
                 avatar.save()
 
             else:
-                avatar = Avatar(username_id=usuario, imagen=data.get("imagen"))
+                avatar = Avatar(user=data.get("user"), imagen=data.get("imagen"))
                 avatar.save()            
 
-        return redirect('panel')
+        return redirect('portfolio_admin')
 
     contexto = {
         "form": AvatarForm(

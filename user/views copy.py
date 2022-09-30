@@ -11,27 +11,23 @@ from user.models import Avatar
 
 @login_required
 def upload_avatar(request):
-    usuario = request.user.id
+    
+    editar_avatar = Avatar.objects.get(user_id=request.user)
+    
     if request.method == "POST":
-        
-        formulario = AvatarForm(request.POST, request.FILES)
-        
+
+        formulario = AvatarForm(request.POST, request.FILES, instance = editar_avatar)
+
         if formulario.is_valid():
-            
+
             data = formulario.cleaned_data
-            avatar = Avatar.objects.filter(username_id=usuario)
-            
-            if  len(avatar) > 0:
-                avatar = Avatar.objects.get(username_id=usuario)
-                avatar.delete()
-                avatar = Avatar(username_id=usuario, imagen=data.get("imagen"))
-                avatar.save()
+            editar_avatar.imagen = data.get('imagen')
+            try:
+                editar_avatar.save()
+            except django.db.utils.IntegrityError:
+                messages.error(request, "La modificacion ha fallado")
 
-            else:
-                avatar = Avatar(username_id=usuario, imagen=data.get("imagen"))
-                avatar.save()            
-
-        return redirect('panel')
+            return redirect('portfolio_admin')
 
     contexto = {
         "form": AvatarForm(
