@@ -19,8 +19,8 @@ def upload_avatar(request):
             avatar = Avatar.objects.filter(user=data.get("usuario"))
 
             if len(avatar) > 0:
-                avatar = avatar[0]
-                avatar.imagen = formulario.cleaned_data["imagen"]
+                avatar.image = formulario.cleaned_data
+                avatar = Avatar.imagen.get(id=4)
                 avatar.save()
 
             else:
