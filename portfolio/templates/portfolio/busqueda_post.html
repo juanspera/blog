@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+
+{% block content %}
+
+    <form action="/busqueda_post_res" method="GET" enctype="multipart/form-data" style="margin: auto; width: 220px;">
+    {% csrf_token %}
+    <h2>{{ titulo_form }}</h2>
+
+        {{ form.as_p }}
+
+        <input type="submit" value="{{ boton_envio }}">
+
+    </form>
+
+{% endblock %}

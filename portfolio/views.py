@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 
 import django
 
-from .forms import ProjectFormulario
+from .forms import ProjectFormulario, BusquedaPostForm
 from .models import Project
 
 # Create your views here.
@@ -97,3 +97,23 @@ def editar_portfolio(request, id):
 
     return render(request, 'base_formulario.html', contexto)
 
+def busqueda_post_res(request):
+    titulo = request.GET.get('title')
+
+    projects = Project.objects.filter(title__icontains=titulo)
+    contexto = {
+        'projects': projects
+    }
+
+    return render(request, 'portfolio/portfolio.html', contexto)
+
+
+def busqueda_post(request):
+
+    contexto = {
+        'form': BusquedaPostForm(),
+        'titulo_form': 'Buscar Post',
+        'boton_envio': 'Buscar'
+    }
+
+    return render(request, 'portfolio/busqueda_post.html', contexto)
