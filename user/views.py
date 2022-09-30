@@ -31,7 +31,7 @@ def upload_avatar(request):
                 avatar = Avatar(username_id=usuario, imagen=data.get("imagen"))
                 avatar.save()            
 
-        return redirect('panel')
+        return redirect('portfolio')
 
     contexto = {
         "form": AvatarForm(

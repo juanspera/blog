@@ -27,7 +27,7 @@
 					class="col-md-12 col-lg logo d-flex align-items-center justify-content-center justify-content-lg-start">
 					{% if user.is_authenticated %}
 					<a class="nombre" href="{% url 'UserEditar' %}">Usuario: {{ user.get_username }}</a>
-					<a class="icono icon-dot" href="{% url 'UserAvatar' %}"></a>
+					<a class="icono icon-dot" href="{% url 'UserAvatar' %}"></a>			
 					<img height="40px" src="{{ user.avatar.imagen.url }}" alt="">
 					{% else %}
 					<a class="nombre" href="{% url 'portfolio' %}">Juan Pablo Spera</a>
