@@ -1,3 +1,7 @@
+# Unit Test
+
+**Se ejecuta el test:**
+
 (venv) PS C:\Users\juans\Documents\apps\blog> python manage.py test
 Found 5 test(s).
 Creating test database for alias 'default'...
@@ -23,3 +27,10 @@ Ran 5 tests in 0.872s
 
 FAILED (failures=2)
 Destroying test database for alias 'default'...
+
+**Se ejecuta el test:**
+
+Los resultados arrojan tres casos correctos y dos intentos fallidos.
+
+1.El primer test es correcto porque lo que se crea en la clase Project es lo que se recibe de la misma.
+2.El segundo test es correcto porque se accede a la página solicitada.
