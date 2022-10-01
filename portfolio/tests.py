@@ -43,5 +43,5 @@ class LoginTestCase(TestCase):
 
     def testLogin(self):
         self.client.login(username='john', password='1234Qwert_')
-        response = self.client.get(reverse('UserLogin'))
+        response = self.client.get(reverse('portfolio'))
         self.assertEqual(response.status_code, 200)
