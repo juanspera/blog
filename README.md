@@ -1,6 +1,6 @@
 # Este es mi primer blog.
-**Alumno: Juan Pablo Spera
-Versión: entrega final**
+**Juan Pablo Spera**
+**Versión: final**
 
 La web es un blog personal sólo para usuarios registrados. Es decir, el autor es el único en poder subir, modificar o eliminar posts al blog (por ello es personal) y, para tener acceso al contenido del blog, hay que estar registrado.
 
